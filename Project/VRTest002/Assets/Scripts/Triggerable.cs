@@ -8,9 +8,19 @@ public class Triggerable : MonoBehaviour
   [SerializeField]
   private string triggerTag = "";
 
+  private bool enable = true;
+
   private void OnTriggerEnter(Collider other) {
-    if (other.tag == triggerTag) {
+    if (enable && other.tag == triggerTag) {
       onTriggerEvent?.Invoke(this, other);
     }
+  }
+
+  public void Enable() {
+    enable = true;
+  }
+
+  public void Disable() {
+    enable = false;
   }
 }
