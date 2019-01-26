@@ -29,7 +29,7 @@ public class GrassManager : MonoBehaviour {
 
   private void OnTimeOver(object sender, System.EventArgs args) {
     foreach (Grass grass in grassArray) {
-      grass.SetSize(0.0f);
+    //  grass.SetSize(0.0f);
     }
   }
 }
