@@ -6,17 +6,24 @@ ModelImporter:
     100000: Cube
     100002: //RootNode
     100004: "\u7ACB\u65B9\u4F53"
+    100006: Camera
+    100008: Lamp
     400000: Cube
     400002: //RootNode
     400004: "\u7ACB\u65B9\u4F53"
+    400006: Camera
+    400008: Lamp
+    2000000: Camera
     2100000: No Name
     2100002: Stem_ru
+    2100004: tree_ru
     2300000: Cube
     2300002: "\u7ACB\u65B9\u4F53"
     3300000: Cube
     3300002: "\u7ACB\u65B9\u4F53"
     4300000: "\u7ACB\u65B9\u4F53"
     4300002: Cube
+    10800000: Lamp
   externalObjects:
   - first:
       type: UnityEngine:Material
