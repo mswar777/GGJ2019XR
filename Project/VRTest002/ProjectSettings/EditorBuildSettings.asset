@@ -5,28 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Test/EnemySceneTemplate.unity
-    guid: e180ba236aebf7e4682d826cebd9427a
-  - enabled: 1
-    path: Assets/Scenes/SceneTitle.unity
+    path: Assets/Scenes/VRScene/SceneTitle.unity
     guid: a4677de37a7152d4d9d8e85ae286ad76
   - enabled: 1
-    path: Assets/Scenes/SceneGame.unity
+    path: Assets/Scenes/VRScene/SceneGame.unity
     guid: 8f3236bb19b15a247a59d494e5d9417c
   - enabled: 1
-    path: Assets/Scenes/SceneEnding.unity
+    path: Assets/Scenes/VRScene/SceneEnding.unity
     guid: 19ea183c6c09fa74b8f16cf4c0b5ac1d
   - enabled: 1
-    path: Assets/Scenes/SceneGameOver.unity
+    path: Assets/Scenes/VRScene/SceneGameOver.unity
     guid: 85e5d73a1aa5a004f80e7038851fd9b0
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 646d92f327b54fc419b95615d1e92608
+    path: Assets/Scenes/VRScene/Stage01.unity
+    guid: 65187f533bcd51e49b66cbe287403d62
   - enabled: 1
-    path: Assets/Scenes/TestStage.unity
-    guid: d7503d685ae3ca04b9baceb768b5d833
+    path: Assets/Scenes/VRScene/Stage02.unity
+    guid: 078d4fa520bfb2e469d6996f563196df
   m_configObjects: {}

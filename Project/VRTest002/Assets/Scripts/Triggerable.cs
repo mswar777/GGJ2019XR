@@ -6,7 +6,7 @@ public class Triggerable : MonoBehaviour
   public TriggerEventDelegate onTriggerEvent;
 
   [SerializeField]
-  private string triggerTag;
+  private string triggerTag = "";
 
   private void OnTriggerEnter(Collider other) {
     if (other.tag == triggerTag) {

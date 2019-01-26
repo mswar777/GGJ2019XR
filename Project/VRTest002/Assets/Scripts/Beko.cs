@@ -55,7 +55,7 @@ public class Beko : MonoBehaviour
         position.y = Mathf.Sin(phit) * direction.x + Mathf.Cos(phit) * direction.y;
         position.z = direction.z;
         position.x = Mathf.Cos(psit) * position.x + Mathf.Sin(psit) * position.z;
-        position.y = position.y;
+        //position.y = position.y;
         position.z = -Mathf.Sin(psit) * position.x + Mathf.Cos(psit) * position.z;
         this.transform.position = base_position + position;
         this.transform.forward = position - previous_position;

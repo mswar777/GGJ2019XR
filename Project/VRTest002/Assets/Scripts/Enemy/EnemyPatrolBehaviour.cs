@@ -17,7 +17,7 @@ public class EnemyPatrolBehaviour : EnemyBehaviourBase
   }
 
   [SerializeField]
-  private PatrolType patrolType;
+  private PatrolType patrolType = PatrolType.Once;
 
   public RouteSection[] route;
 

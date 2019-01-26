@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public enum SceneState
 {
     TITLE_SCENE = 0,
-    GAME_SCENE = 1,
-    ENDING_SCENE = 2,
-    GAME_OVER_SCENE = 3,
-    TEST_SCENE = 5,
-    TEST_STAGE = 4,
+    GAME_SCENE,
+    VR_STAGE01,
+    VR_STAGE02,
+    ENDING_SCENE,
+    GAME_OVER_SCENE,
 }
 
 public class SceneLoader : MonoBehaviour
@@ -26,17 +26,17 @@ public class SceneLoader : MonoBehaviour
             case SceneState.GAME_SCENE:
                 sceneName = "SceneGame";
                 break;
+            case SceneState.VR_STAGE01:
+                sceneName = "Stage01";
+                break;
+            case SceneState.VR_STAGE02:
+                sceneName = "Stage02";
+                break;
             case SceneState.ENDING_SCENE:
                 sceneName = "SceneEnding";
                 break;
             case SceneState.GAME_OVER_SCENE:
                 sceneName = "SceneGameOver";
-                break;
-            case SceneState.TEST_SCENE:
-                sceneName = "TestScene";
-                break;
-            case SceneState.TEST_STAGE:
-                sceneName = "TestStage";
                 break;
         }
         SteamVR_LoadLevel.Begin(sceneName);
@@ -53,17 +53,17 @@ public class SceneLoader : MonoBehaviour
             case SceneState.GAME_SCENE:
                 sceneName = "SceneGame";
                 break;
+            case SceneState.VR_STAGE01:
+                sceneName = "Stage01";
+                break;
+            case SceneState.VR_STAGE02:
+                sceneName = "Stage02";
+                break;
             case SceneState.ENDING_SCENE:
                 sceneName = "SceneEnding";
                 break;
             case SceneState.GAME_OVER_SCENE:
                 sceneName = "SceneGameOver";
-                break;
-            case SceneState.TEST_SCENE:
-                sceneName = "TestScene";
-                break;
-            case SceneState.TEST_STAGE:
-                sceneName = "TestStage";
                 break;
         }
         SceneManager.LoadSceneAsync(sceneName,LoadSceneMode.Additive);

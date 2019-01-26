@@ -9,7 +9,7 @@ public class GrassManager : MonoBehaviour {
   [SerializeField]
   private float sizeChangePeriod = 1;
   [SerializeField]
-  private AnimationCurve sizeChangePattern;
+  private AnimationCurve sizeChangePattern = new AnimationCurve();
   private int currentSizeTime;
 
   void Start() {

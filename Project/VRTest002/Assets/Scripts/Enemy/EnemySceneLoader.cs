@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemySceneLoader : MonoBehaviour
 {
   [SerializeField]
-  private string[] sceneName;
+  private string[] sceneName = null;
 
 
   private void Start() {

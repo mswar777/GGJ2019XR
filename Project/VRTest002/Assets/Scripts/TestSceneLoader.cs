@@ -24,14 +24,14 @@ public class TestSceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.F))
         {
             print("Call1");
             nowStateNum = (++nowStateNum) % stateNum;
             var state = (SceneState)Enum.ToObject(typeof(SceneState), nowStateNum);
             loader.LoadSceneWithFade(state);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.A))
         {
             print("Call2");
             nowStateNum = (++nowStateNum) % stateNum;
