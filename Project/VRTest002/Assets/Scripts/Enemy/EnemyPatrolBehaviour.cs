@@ -25,6 +25,13 @@ public class EnemyPatrolBehaviour : EnemyBehaviourBase
   private float currentProgress = 0.0f;
   private bool movingForward = true;
   private bool isOver = false;
+  private Vector3 origin_pos;
+
+  private void Awake()
+  {
+    origin_pos = transform.position;
+    
+  }
 
   protected override void Move() {
     if (route.Length <= 0 || isOver) {
@@ -32,11 +39,12 @@ public class EnemyPatrolBehaviour : EnemyBehaviourBase
     }
 
     currentProgress = Mathf.Clamp01(currentProgress + (Time.deltaTime / route[currentSectionIndex].duration));
-
+    
+    transform.position = origin_pos;
     if (movingForward) {
-      transform.position = Vector3.Lerp(route[currentSectionIndex].startPosition, route[currentSectionIndex].endPosition, route[currentSectionIndex].curve.Evaluate(currentProgress));
+      transform.position += Vector3.Lerp(route[currentSectionIndex].startPosition, route[currentSectionIndex].endPosition, route[currentSectionIndex].curve.Evaluate(currentProgress));
     } else {
-      transform.position = Vector3.Lerp(route[currentSectionIndex].endPosition, route[currentSectionIndex].startPosition, route[currentSectionIndex].curve.Evaluate(currentProgress));
+      transform.position += Vector3.Lerp(route[currentSectionIndex].endPosition, route[currentSectionIndex].startPosition, route[currentSectionIndex].curve.Evaluate(currentProgress));
     }
 
     if (currentProgress >= 1.0f) {

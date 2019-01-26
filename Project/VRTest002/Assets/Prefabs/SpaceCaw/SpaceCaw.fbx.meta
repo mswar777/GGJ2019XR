@@ -4,17 +4,38 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: "\u7ACB\u65B9\u4F53"
+    100004: "\u7ACB\u65B9\u4F53.001"
     400000: //RootNode
+    400002: "\u7ACB\u65B9\u4F53"
+    400004: "\u7ACB\u65B9\u4F53.001"
     2100000: No Name
+    2100002: "\u30DE\u30C6\u30EA\u30A2\u30EB.002"
+    2100004: "\u30DE\u30C6\u30EA\u30A2\u30EB.001"
     2300000: //RootNode
+    2300002: "\u7ACB\u65B9\u4F53"
+    2300004: "\u7ACB\u65B9\u4F53.001"
     3300000: //RootNode
+    3300002: "\u7ACB\u65B9\u4F53"
+    3300004: "\u7ACB\u65B9\u4F53.001"
     4300000: "\u7ACB\u65B9\u4F53"
+    4300002: "\u7ACB\u65B9\u4F53.001"
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
     second: {fileID: 2100000, guid: 2488ea549573d418aae1489d0830e995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u30DE\u30C6\u30EA\u30A2\u30EB.001"
+    second: {fileID: 2100000, guid: b888656754fcb4811a7c97acd2d73c7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u30DE\u30C6\u30EA\u30A2\u30EB.002"
+    second: {fileID: 2100000, guid: 1061929650f6a44f292518d440c03f3c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
