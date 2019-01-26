@@ -24,7 +24,7 @@ public class StageState : MonoBehaviour {
     currentTime = startTime;
 
     foreach(Triggerable grassRoll in grassRollList) {
-      grassRoll.onTriggerEvent += OnGrassRollReceive;
+    //  grassRoll.onTriggerEvent += OnGrassRollReceive;
     }
   }
 
