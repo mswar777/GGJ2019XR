@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class StageState : MonoBehaviour {
@@ -17,8 +18,14 @@ public class StageState : MonoBehaviour {
   public event EventHandler onTimeOverEvent;
   public event EventHandler onTimeChangeEvent;
 
+  public List<PickupableItem> grassRollList;
+
   void Start() {
     currentTime = startTime;
+
+    foreach(PickupableItem grassRoll in grassRollList) {
+      grassRoll.onPickUpEvent += OnGrassRollReceive;
+    }
   }
 
   void Update() {
@@ -30,5 +37,11 @@ public class StageState : MonoBehaviour {
         onTimeOverEvent?.Invoke(this, null);
       }
     }
+  }
+
+  private void OnGrassRollReceive(PickupableItem sender, GameObject reciever) {
+    Destroy(sender.gameObject);
+    currentTime += 10;
+    grassRollList.Remove(sender);
   }
 }
