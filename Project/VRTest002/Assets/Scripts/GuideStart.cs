@@ -8,7 +8,7 @@ public class GuideStart : MonoBehaviour
     void Start()
     {
 
-        StartCouroutin();
+        //StartCouroutin();
     }
 
     // Update is called once per frame
