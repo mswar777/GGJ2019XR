@@ -284,6 +284,12 @@ namespace Valve.VR
             return hmd.GetFloatTrackedDeviceProperty(deviceId, prop, ref error);
         }
 
+        public delegate void ActiveCallback(bool b);
+
+        [SerializeField]
+        public static ActiveCallback RigCameraOnCB = null;
+        [SerializeField]
+        public static ActiveCallback MouseCameraOnCB = null;
 
         private static bool runningTemporarySession = false;
         public static bool InitializeTemporarySession(bool initInput = false)
@@ -303,9 +309,18 @@ namespace Valve.VR
 
                     if (error != EVRInitError.None)
                     {
-                        Debug.LogError("<b>[SteamVR]</b> Error during OpenVR Init: " + error.ToString());
+                        Debug.LogWarning("<b>[SteamVR]</b> Error during OpenVR Init: " + error.ToString());
+                        //Debug.LogError("<b>[SteamVR]</b> Error during OpenVR Init: " + error.ToString());
+                        if (RigCameraOnCB != null)
+                            RigCameraOnCB(false);
+                        if (MouseCameraOnCB != null)
+                            MouseCameraOnCB(true);
                         return false;
                     }
+                    if (RigCameraOnCB != null)
+                        RigCameraOnCB(true);
+                    if (MouseCameraOnCB != null)
+                        MouseCameraOnCB(false);
 
                     IdentifyEditorApplication(false);
 

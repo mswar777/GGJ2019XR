@@ -64,7 +64,7 @@ public class Beko : MonoBehaviour
         position.y = Mathf.Sin(phit) * direction.x + Mathf.Cos(phit) * direction.y;
         position.z = direction.z;
         position.x = Mathf.Cos(psit) * position.x + Mathf.Sin(psit) * position.z;
-        position.y = position.y;
+        //position.y = position.y;
         position.z = -Mathf.Sin(psit) * position.x + Mathf.Cos(psit) * position.z;
         this.transform.position = base_position + position;
         this.transform.forward = -(position - previous_position);
@@ -77,7 +77,7 @@ public class Beko : MonoBehaviour
     void Update()
     {
         vt += Time.deltaTime;
-        //life_time -= Time.deltaTime;
+        life_time -= Time.deltaTime;
         if (life_time <= 0f)
             beko_manager.RemoveBeko(this.gameObject);
         if (!release_flg)
