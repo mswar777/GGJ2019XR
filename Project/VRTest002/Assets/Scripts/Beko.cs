@@ -5,7 +5,7 @@ using UnityEngine;
 public class Beko : MonoBehaviour
 {
     float t;
-    float life_time = 5.0f;
+    float life_time = 60.0f;
     BekoManager beko_manager;
     Vector2 theta;
     float movement_scale = 100.0f;
