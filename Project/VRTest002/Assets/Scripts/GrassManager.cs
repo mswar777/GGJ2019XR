@@ -22,14 +22,14 @@ public class GrassManager : MonoBehaviour {
       currentSizeTime = (int)(stageState.CurrentTime / sizeChangePeriod);
       float currentSizeFloat = Mathf.Clamp01(stageState.CurrentTime / stageState.startTime);
       foreach(Grass grass in grassArray) {
-        grass.SetSize(sizeChangePattern.Evaluate(currentSizeFloat));
+      //  grass.SetSize(sizeChangePattern.Evaluate(currentSizeFloat));
       }
     }
   }
 
   private void OnTimeOver(object sender, System.EventArgs args) {
     foreach (Grass grass in grassArray) {
-      grass.SetSize(0.0f);
+    //  grass.SetSize(0.0f);
     }
   }
 }
