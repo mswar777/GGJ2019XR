@@ -8,10 +8,15 @@ public class Beko : MonoBehaviour
     float life_time = 5.0f;
     BekoManager beko_manager;
     Vector2 theta;
-    float movement_scale = 1.0f;
+    float movement_scale = 100.0f;
     float speed;
+    float vt;
+    float voice_time = 1f;
     Vector3 base_position;
     Vector3 direction;
+    public AudioClip moving_voice;
+    public AudioClip throw_voice;
+    AudioSource audio_source;
 
     public bool release_flg = false;
 
@@ -20,8 +25,12 @@ public class Beko : MonoBehaviour
         t = 0f;
         beko_manager = GameObject.Find("BekoManager").GetComponent<BekoManager>();
         theta = Vector2.zero;
-        speed = Random.Range(8.0f, 16.0f);
-        movement_scale = Random.Range(0.1f, 0.5f);
+        speed = Random.Range(2f, 6.0f);
+        voice_time = speed * 0.01f;
+        vt = Random.Range(0f, speed * 0.1f);
+        audio_source = this.GetComponent<AudioSource>();
+        audio_source.pitch = Random.Range(0.5f, 2f);
+        movement_scale = Random.Range(movement_scale * 0.7f, movement_scale * 0.8f);
         base_position = Vector3.zero;
         direction = this.transform.up * movement_scale;
         this.transform.position = direction;
@@ -55,10 +64,10 @@ public class Beko : MonoBehaviour
         position.y = Mathf.Sin(phit) * direction.x + Mathf.Cos(phit) * direction.y;
         position.z = direction.z;
         position.x = Mathf.Cos(psit) * position.x + Mathf.Sin(psit) * position.z;
-        //position.y = position.y;
+        position.y = position.y;
         position.z = -Mathf.Sin(psit) * position.x + Mathf.Cos(psit) * position.z;
         this.transform.position = base_position + position;
-        this.transform.forward = position - previous_position;
+        this.transform.forward = -(position - previous_position);
         t += Time.deltaTime;
         if (t >= speed)
             t = 0f;
@@ -67,12 +76,23 @@ public class Beko : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-//        life_time -= Time.deltaTime;
+        vt += Time.deltaTime;
+        //life_time -= Time.deltaTime;
         if (life_time <= 0f)
             beko_manager.RemoveBeko(this.gameObject);
         if (!release_flg)
         {
             Moving();
+            audio_source.clip = moving_voice;
+        }
+        else
+        {
+            audio_source.clip = throw_voice;
+        }
+        if (vt > voice_time)
+        {
+            audio_source.Play();
+            vt = 0f;
         }
     }
 

@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public enum SceneState
 {
     TITLE_SCENE = 0,
-    GAME_SCENE,
+    //GAME_SCENE,
     VR_STAGE01,
     VR_STAGE02,
+    VR_STAGE03,
     ENDING_SCENE,
     GAME_OVER_SCENE,
 }
@@ -23,14 +24,17 @@ public class SceneLoader : MonoBehaviour
             case SceneState.TITLE_SCENE:
                 sceneName = "SceneTitle";
                 break;
-            case SceneState.GAME_SCENE:
-                sceneName = "SceneGame";
-                break;
+            //case SceneState.GAME_SCENE:
+            //    sceneName = "SceneGame";
+            //    break;
             case SceneState.VR_STAGE01:
                 sceneName = "Stage01";
                 break;
             case SceneState.VR_STAGE02:
                 sceneName = "Stage02";
+                break;
+            case SceneState.VR_STAGE03:
+                sceneName = "Stage03";
                 break;
             case SceneState.ENDING_SCENE:
                 sceneName = "SceneEnding";
@@ -50,13 +54,16 @@ public class SceneLoader : MonoBehaviour
             case SceneState.TITLE_SCENE:
                 sceneName = "SceneTitle";
                 break;
-            case SceneState.GAME_SCENE:
-                sceneName = "SceneGame";
-                break;
+            //case SceneState.GAME_SCENE:
+            //    sceneName = "SceneGame";
+            //    break;
             case SceneState.VR_STAGE01:
                 sceneName = "Stage01";
                 break;
             case SceneState.VR_STAGE02:
+                sceneName = "Stage02";
+                break;
+            case SceneState.VR_STAGE03:
                 sceneName = "Stage02";
                 break;
             case SceneState.ENDING_SCENE:
