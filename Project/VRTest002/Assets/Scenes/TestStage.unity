@@ -428,7 +428,7 @@ MonoBehaviour:
   route:
   - startPosition: {x: 20.7, y: 79, z: 151.8}
     endPosition: {x: -19.6, y: 79, z: 151.8}
-    duration: 3
+    duration: 4.74
     curve:
       serializedVersion: 2
       m_Curve:
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063981b6cd924e14498e45341d71c41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 13.15
+  startTime: 20
   currentTime: 0
   timeOver: 0
   grassRollList:
@@ -594,7 +594,7 @@ MonoBehaviour:
   grassArray:
   - {fileID: 7960915736076474432}
   - {fileID: 362631647}
-  sizeChangePeriod: 0.5
+  sizeChangePeriod: 0.37
   sizeChangePattern:
     serializedVersion: 2
     m_Curve:
