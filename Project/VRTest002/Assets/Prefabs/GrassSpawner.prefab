@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &83296141980225784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 83296141980225786}
+  - component: {fileID: 83296141980225787}
+  m_Layer: 0
+  m_Name: GrassSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &83296141980225786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83296141980225784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &83296141980225787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83296141980225784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df9cb482678c384caf2944abd65fb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassPrefabs:
+  - {fileID: 5087170056749198448, guid: e71480b76033f429588c7166dcde1c85, type: 3}
+  - {fileID: 145698559788509492, guid: 11ae48fa2f4db4d778b806522540255a, type: 3}
+  - {fileID: 3256261668077584966, guid: 7314fc5560ad445bab9388cdb8911b8f, type: 3}
+  - {fileID: 5087170056749198448, guid: e71480b76033f429588c7166dcde1c85, type: 3}
+  - {fileID: 145698559788509492, guid: 11ae48fa2f4db4d778b806522540255a, type: 3}
+  - {fileID: 3256261668077584966, guid: 7314fc5560ad445bab9388cdb8911b8f, type: 3}
+  - {fileID: 5087170056749198448, guid: e71480b76033f429588c7166dcde1c85, type: 3}
+  - {fileID: 145698559788509492, guid: 11ae48fa2f4db4d778b806522540255a, type: 3}
+  - {fileID: 3256261668077584966, guid: 7314fc5560ad445bab9388cdb8911b8f, type: 3}
+  - {fileID: 5087170056749198448, guid: e71480b76033f429588c7166dcde1c85, type: 3}
+  spawnAnchor: {fileID: 83296141980225786}
