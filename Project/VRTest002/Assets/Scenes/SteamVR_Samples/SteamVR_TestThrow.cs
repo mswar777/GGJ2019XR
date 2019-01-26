@@ -36,7 +36,7 @@ namespace Valve.VR.Extras
                 Rigidbody rigidbody = go.GetComponent<Rigidbody>();
                 Object.DestroyImmediate(joint);
                 joint = null;
-                Object.Destroy(go, 15.0f);
+                //Object.Destroy(go, 15.0f);
 
                 // We should probably apply the offset between trackedObj.transform.position
                 // and device.transform.pos to insert into the physics sim at the correct
