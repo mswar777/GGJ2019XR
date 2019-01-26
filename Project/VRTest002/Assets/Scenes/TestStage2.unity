@@ -908,8 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 10
   maxYAngle: 80
-  ballPrefab: {fileID: 6175441746474199810, guid: dadfc5931d43ece46bfbca3e510c5233,
-    type: 3}
+  ballPrefab: {fileID: 1722033968, guid: 8ce66228917fc5246b62ec920056d321, type: 3}
 --- !u!1 &1813816026
 GameObject:
   m_ObjectHideFlags: 0
