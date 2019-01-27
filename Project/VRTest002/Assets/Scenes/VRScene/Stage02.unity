@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 406752315}
   - component: {fileID: 406752314}
   - component: {fileID: 406752318}
+  - component: {fileID: 406752319}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -272,6 +273,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!114 &406752319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406752313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccadd323825b6ce42af13a9d6f3bf2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beko_counter: 6
 --- !u!1001 &476705715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1181,65 +1195,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &983186464 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3732247116248428020, guid: eca97898efa3e55469d891908d02e4bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1634372660}
-  m_PrefabAsset: {fileID: 0}
---- !u!21 &985831134
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &990408792 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1247824187649339763, guid: cf3b99a54c3ec4a60942382815fd065c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1628565604}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &992726782 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3732247116248428020, guid: eca97898efa3e55469d891908d02e4bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1382317351}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1095276142 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3732247116248428020, guid: eca97898efa3e55469d891908d02e4bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1380757365}
-  m_PrefabAsset: {fileID: 0}
---- !u!43 &1124804663
+--- !u!43 &755927811
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1399,6 +1355,30 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &983186464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3732247116248428020, guid: eca97898efa3e55469d891908d02e4bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1634372660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &990408792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1247824187649339763, guid: cf3b99a54c3ec4a60942382815fd065c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1628565604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &992726782 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3732247116248428020, guid: eca97898efa3e55469d891908d02e4bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1382317351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1095276142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3732247116248428020, guid: eca97898efa3e55469d891908d02e4bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1380757365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1136998419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1928,11 +1908,11 @@ PrefabInstance:
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 985831134}
+      objectReference: {fileID: 1612726902}
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1124804663}
+      objectReference: {fileID: 755927811}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
 --- !u!4 &1268310047 stripped
@@ -3182,6 +3162,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1171447607}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1612726902
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1628565604
 PrefabInstance:
   m_ObjectHideFlags: 0

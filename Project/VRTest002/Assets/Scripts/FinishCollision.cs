@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FinishCollision : MonoBehaviour
 {
+    [SerializeField]
+    private int beko_counter = 1;
+
     TestSceneLoader loader;
 
     // Start is called before the first frame update
@@ -28,10 +31,15 @@ public class FinishCollision : MonoBehaviour
         //if (collision.gameObject.Name != "CawBall")
         //     return;
 
-        if (collision.relativeVelocity.magnitude > 2)
+        Debug.Log("caw hit!");
+
+        if (collision.relativeVelocity.magnitude > 0.1)
         {
-            loader.NextSceneLoad();
-            //audioSource.Play();
+            if (--beko_counter <= 0)
+            {
+                loader.NextSceneLoad();
+                //audioSource.Play();
+            }
         }
     }
 }

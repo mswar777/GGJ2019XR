@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 4000013889601590}
   - component: {fileID: 20000014031267948}
   - component: {fileID: 5590348267660072693}
-  - component: {fileID: 4220001784040259879}
+  - component: {fileID: 704710812}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: f9e815adf6d414663b9d4fbf24352f07, type: 2}
---- !u!81 &4220001784040259879
+--- !u!81 &704710812
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 10
   maxYAngle: 80
-  forceValue: 1000
+  forceValue: 6000
   ballPrefab: {fileID: 1722033968, guid: 8ce66228917fc5246b62ec920056d321, type: 3}
 --- !u!114 &927654129
 MonoBehaviour:
