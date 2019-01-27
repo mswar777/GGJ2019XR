@@ -16,7 +16,6 @@ public enum SceneState
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField]
     public AudioSource CowSound;
 
     public void LoadSceneWithFade(SceneState scene)
@@ -46,7 +45,8 @@ public class SceneLoader : MonoBehaviour
                 sceneName = "SceneGameOver";
                 break;
         }
-        CowSound.Play();
+        print(CowSound);
+        if(CowSound != null)CowSound.Play();
         //CowSound.SetActive(true);
         SteamVR_LoadLevel.Begin(sceneName);
     }

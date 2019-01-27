@@ -31,9 +31,8 @@ public class TestSceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F))
+        if (spawn2.GetStateUp(trackedObj.inputSource))
         {
-            print("Call1");
             NextSceneLoad();
         }
 #if false

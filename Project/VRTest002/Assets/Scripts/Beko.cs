@@ -28,7 +28,7 @@ public class Beko : MonoBehaviour
         speed = Random.Range(2f, 6.0f);
         voice_time = speed * 0.01f;
         vt = Random.Range(0f, speed * 0.1f);
-        audio_source = this.GetComponent<AudioSource>();
+        audio_source = gameObject.GetComponent<AudioSource>();
         audio_source.pitch = Random.Range(0.5f, 2f);
         movement_scale = Random.Range(movement_scale * 0.7f, movement_scale * 0.8f);
         base_position = Vector3.zero;
