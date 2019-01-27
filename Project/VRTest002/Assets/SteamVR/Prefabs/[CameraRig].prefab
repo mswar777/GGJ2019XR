@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d6cab67fbe6e44993bbc900f56241f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CowSound: {fileID: 0}
 --- !u!1 &146900
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +550,7 @@ GameObject:
   - component: {fileID: 3022497758230647574}
   - component: {fileID: 3022497758230647657}
   - component: {fileID: 3022497758230647572}
+  - component: {fileID: 927654129}
   m_Layer: 0
   m_Name: TestMouseCamera
   m_TagString: MainCamera
@@ -597,7 +599,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -605,7 +607,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -634,7 +636,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 10
   maxYAngle: 80
+  forceValue: 1000
   ballPrefab: {fileID: 1722033968, guid: 8ce66228917fc5246b62ec920056d321, type: 3}
+--- !u!114 &927654129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022497758230647656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: f9e815adf6d414663b9d4fbf24352f07, type: 2}
 --- !u!1001 &3368628291269380428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -642,6 +658,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458974}
     m_Modifications:
+    - target: {fileID: 8195811581347363537, guid: d13710882c6664a3bae07be88f108ac1,
+        type: 3}
+      propertyPath: m_Name
+      value: HandL
+      objectReference: {fileID: 0}
     - target: {fileID: 4368618873864723727, guid: d13710882c6664a3bae07be88f108ac1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -696,11 +717,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195811581347363537, guid: d13710882c6664a3bae07be88f108ac1,
-        type: 3}
-      propertyPath: m_Name
-      value: HandL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13710882c6664a3bae07be88f108ac1, type: 3}
@@ -807,6 +823,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402434}
     m_Modifications:
+    - target: {fileID: 4538393217478587593, guid: 07e54b9dbb7784469a67ec6114718921,
+        type: 3}
+      propertyPath: m_Name
+      value: HandR
+      objectReference: {fileID: 0}
     - target: {fileID: 7586466943493638739, guid: 07e54b9dbb7784469a67ec6114718921,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,11 +897,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: -0.04778541
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538393217478587593, guid: 07e54b9dbb7784469a67ec6114718921,
-        type: 3}
-      propertyPath: m_Name
-      value: HandR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07e54b9dbb7784469a67ec6114718921, type: 3}

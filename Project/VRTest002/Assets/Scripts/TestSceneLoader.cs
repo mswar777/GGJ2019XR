@@ -31,6 +31,7 @@ public class TestSceneLoader : MonoBehaviour
             var state = (SceneState)Enum.ToObject(typeof(SceneState), nowStateNum);
             loader.LoadSceneWithFade(state);
         }
+#if false
         if (Input.GetKeyUp(KeyCode.A))
         {
             print("Call2");
@@ -38,5 +39,6 @@ public class TestSceneLoader : MonoBehaviour
             var state = (SceneState)Enum.ToObject(typeof(SceneState), nowStateNum);
             loader.LoadScene(state);
         }
+#endif
     }
 }
