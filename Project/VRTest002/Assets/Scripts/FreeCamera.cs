@@ -3,6 +3,7 @@
 public class FreeCamera : MonoBehaviour {
   public float sensitivity = 10f;
   public float maxYAngle = 80f;
+  public float forceValue = 1000;
   private Vector2 currentRotation;
 
   public GameObject ballPrefab;
@@ -16,7 +17,7 @@ public class FreeCamera : MonoBehaviour {
     if (Input.GetMouseButtonDown(0)) {
       Cursor.lockState = CursorLockMode.Locked;
       GameObject ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);
-      ball.GetComponent<Rigidbody>().AddForce(transform.forward * 10000);
+      ball.GetComponent<Rigidbody>().AddForce(transform.forward * forceValue);
     }
   }
 }
