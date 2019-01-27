@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-[RequireComponent(typeof(SteamVR_TrackedObject))]
+[RequireComponent(typeof(SteamVR_TrackedObject),typeof(Rigidbody),typeof(BoxCollider))]
 public class CowShot : MonoBehaviour
 {
     //ベコをくっつけるオブジェクト
-    public GameObject attachPoint;
+    public GameObject attachPoint = null;
     //ベコを打ち出す力
     public float ShotPower = 10;
     //つかんで打ち出すのに使用するviveコントローラーのボタンを設定する
@@ -15,21 +15,22 @@ public class CowShot : MonoBehaviour
     //つかむもののタグ
     public string catchTag = "beko";
     //steamvrの処理を行うクラス
-    private SteamVR_Behaviour_Pose trackedObj;
+    private SteamVR_Behaviour_Pose trackedObj = null;
     //打ち出すか
-    private bool isShot;
+    private bool isShot = false;
     //打ち出すベコのリスト
     private List<GameObject> shotBekoList;
     //つながっているjointのリスト
     private List<FixedJoint> jointList;
     //つかむか
-    private bool isCatch;
+    private bool isCatch = false;
     //ベコをくっつけるオブジェクトのrigidbody
-    private Rigidbody attachRb;
+    private Rigidbody attachRb= null;
 
     //各種初期化
     private void Awake()
     {
+        if (attachPoint == null) attachPoint = gameObject;
         attachRb = attachPoint.GetComponent<Rigidbody>();
         shotBekoList = new List<GameObject>();
         jointList = new List<FixedJoint>();
