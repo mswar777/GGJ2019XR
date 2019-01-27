@@ -31,10 +31,9 @@ public class FinishCollision : MonoBehaviour
         //if (collision.gameObject.Name != "CawBall")
         //     return;
 
-        Debug.Log("caw hit!");
-
-        if (collision.relativeVelocity.magnitude > 0.1)
+        if (collision.relativeVelocity.magnitude > 1)
         {
+            Debug.Log("caw hit!");
             if (--beko_counter <= 0)
             {
                 loader.NextSceneLoad();

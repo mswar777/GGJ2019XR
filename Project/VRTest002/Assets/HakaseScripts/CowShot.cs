@@ -44,6 +44,7 @@ public class CowShot : MonoBehaviour
         //つかむボタンを押していれば
         if (spawn.GetState(trackedObj.inputSource))
         {
+            print("CallTrigger");
             isCatch = true;
             isShot = false;
         }
@@ -56,6 +57,7 @@ public class CowShot : MonoBehaviour
         //離したフレームなら
         if (spawn.GetStateUp(trackedObj.inputSource))
         {
+            print("CallTriggerOut");
             isCatch = false;
             isShot = true;
         }
