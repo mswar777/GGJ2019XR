@@ -36,7 +36,8 @@ public class FinishCollision : MonoBehaviour
             Debug.Log("caw hit!");
             if (--beko_counter <= 0)
             {
-                loader.NextSceneLoad();
+                if (loader != null)
+                    loader.NextSceneLoad();
                 //audioSource.Play();
             }
         }
