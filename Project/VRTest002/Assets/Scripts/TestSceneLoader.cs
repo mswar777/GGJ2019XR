@@ -21,15 +21,20 @@ public class TestSceneLoader : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void NextSceneLoad()
+    {
+        nowStateNum = (++nowStateNum) % stateNum;
+        var state = (SceneState)Enum.ToObject(typeof(SceneState), nowStateNum);
+        loader.LoadSceneWithFade(state);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.F))
         {
             print("Call1");
-            nowStateNum = (++nowStateNum) % stateNum;
-            var state = (SceneState)Enum.ToObject(typeof(SceneState), nowStateNum);
-            loader.LoadSceneWithFade(state);
+            NextSceneLoad();
         }
 #if false
         if (Input.GetKeyUp(KeyCode.A))
