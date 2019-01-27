@@ -3,7 +3,7 @@
 public class FreeCamera : MonoBehaviour {
   public float sensitivity = 10f;
   public float maxYAngle = 80f;
-  public float forceValue = 1000;
+  public float forceValue = 0.01f;
   private Vector2 currentRotation;
 
   public GameObject ballPrefab;

@@ -35,6 +35,10 @@ public class TestSceneLoader : MonoBehaviour
         {
             NextSceneLoad();
         }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            NextSceneLoad();
+        }
 #if false
         if (Input.GetKeyUp(KeyCode.A))
         {

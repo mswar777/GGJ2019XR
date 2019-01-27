@@ -667,7 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 10
   maxYAngle: 80
-  forceValue: 10000
+  forceValue: 0.001
   ballPrefab: {fileID: 1722033968, guid: 8ce66228917fc5246b62ec920056d321, type: 3}
 --- !u!114 &927654129
 MonoBehaviour:
