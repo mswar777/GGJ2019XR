@@ -6,10 +6,12 @@ using Valve.VR;
 [RequireComponent(typeof(SteamVR_TrackedObject),typeof(Rigidbody),typeof(BoxCollider))]
 public class CowShot : MonoBehaviour
 {
+    public float offsetRate = 100.0f;
+    public GameObject beko = null;
     //ベコをくっつけるオブジェクト
-    public GameObject attachPoint = null;
+    private GameObject attachPoint = null;
     //ベコを打ち出す力
-    public float ShotPower = 10;
+    private float ShotPower = 0.01f;
     //つかんで打ち出すのに使用するviveコントローラーのボタンを設定する
     public SteamVR_Action_Boolean spawn = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
     //つかむもののタグ
@@ -31,7 +33,7 @@ public class CowShot : MonoBehaviour
     private void Awake()
     {
         if (attachPoint == null) attachPoint = gameObject;
-        attachRb = attachPoint.GetComponent<Rigidbody>();
+        //attachRb = attachPoint.GetComponent<Rigidbody>();
         shotBekoList = new List<GameObject>();
         jointList = new List<FixedJoint>();
         trackedObj = GetComponent<SteamVR_Behaviour_Pose>();
@@ -44,7 +46,6 @@ public class CowShot : MonoBehaviour
         //つかむボタンを押していれば
         if (spawn.GetState(trackedObj.inputSource))
         {
-            print("Call");
             isCatch = true;
             isShot = false;
         }
@@ -57,7 +58,6 @@ public class CowShot : MonoBehaviour
         //離したフレームなら
         if (spawn.GetStateUp(trackedObj.inputSource))
         {
-            print("CallUp");
             isCatch = false;
             isShot = true;
         }
@@ -75,37 +75,45 @@ public class CowShot : MonoBehaviour
 
     private void Shot()
     {
-        //全てのジョイントを外す
-        foreach(var joint in jointList)
-        {
-            DestroyImmediate(joint);
-        }
-        //つかんでいる全てのベコを打ち出す
-        foreach(var cow in shotBekoList)
-        {
-            var cowRb = cow.GetComponent<Rigidbody>();
-            cowRb.velocity = gameObject.transform.forward * ShotPower;
-            cowRb.angularVelocity = gameObject.transform.forward * ShotPower;
-            cow.GetComponent<Beko>().release_flg = true;
-        }
-        //各リストをクリアする
-        shotBekoList.Clear();
-        jointList.Clear();
+        var pos = attachPoint.transform.position;
+        pos += -attachPoint.transform.forward * offsetRate;
+        var shotBeko = Instantiate(beko,pos,Quaternion.identity);
+        //shotBeko.GetComponent<Beko>().release_flg = true;
+        var bekoRb = shotBeko.GetComponent<Rigidbody>();
+        bekoRb.AddForce(attachPoint.transform.forward * ShotPower);
+        //bekoRb.velocity = -attachPoint.transform.forward * ShotPower;
+        //bekoRb.angularVelocity = -attachPoint.transform.forward * ShotPower;
+        ////全てのジョイントを外す
+        //foreach (var joint in jointList)
+        //{
+        //    DestroyImmediate(joint);
+        //}
+        ////つかんでいる全てのベコを打ち出す
+        //foreach(var cow in shotBekoList)
+        //{
+        //    var cowRb = cow.GetComponent<Rigidbody>();
+        //    cowRb.velocity = gameObject.transform.forward * ShotPower;
+        //    cowRb.angularVelocity = gameObject.transform.forward * ShotPower;
+        //    cow.GetComponent<Beko>().release_flg = true;
+        //}
+        ////各リストをクリアする
+        //shotBekoList.Clear();
+        //jointList.Clear();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!isCatch) return;
-        if (collision.gameObject.CompareTag(catchTag))
-        {
-            //ベコのリリースフラグを立てて動かないようにする
-            collision.gameObject.GetComponent<Beko>().release_flg = true;
-            //ジョイントで繋ぐ
-            var joint = collision.gameObject.AddComponent<FixedJoint>();
-            joint.connectedBody = attachRb;
-            //各リストに追加
-            shotBekoList.Add(collision.gameObject);
-            jointList.Add(joint);
-        }
+        //if (!isCatch) return;
+        //if (collision.gameObject.CompareTag(catchTag))
+        //{
+        //    //ベコのリリースフラグを立てて動かないようにする
+        //    collision.gameObject.GetComponent<Beko>().release_flg = true;
+        //    //ジョイントで繋ぐ
+        //    var joint = collision.gameObject.AddComponent<FixedJoint>();
+        //    joint.connectedBody = attachRb;
+        //    //各リストに追加
+        //    shotBekoList.Add(collision.gameObject);
+        //    jointList.Add(joint);
+        //}
     }
 }

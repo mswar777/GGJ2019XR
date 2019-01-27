@@ -25,7 +25,7 @@ public class Beko : MonoBehaviour
         t = 0f;
         beko_manager = GameObject.Find("BekoManager").GetComponent<BekoManager>();
         theta = Vector2.zero;
-        speed = Random.Range(2f, 6.0f);
+        speed = Random.Range(10f, 30.0f);
         voice_time = speed * 0.01f;
         vt = Random.Range(0f, speed * 0.1f);
         audio_source = gameObject.GetComponent<AudioSource>();

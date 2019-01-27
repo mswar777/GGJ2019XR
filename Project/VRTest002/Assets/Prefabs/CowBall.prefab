@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1722033970}
   - component: {fileID: 1722033969}
   - component: {fileID: 4129087389332769119}
+  - component: {fileID: 3831025453289762354}
   m_Layer: 0
   m_Name: CowBall
   m_TagString: Player
@@ -102,9 +103,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722033968}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -207,6 +208,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3831025453289762354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722033968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc68765702f7e954b99698e807f53dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderOffTime: 1
 --- !u!1001 &4937077133104805748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,11 +228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1722033973}
     m_Modifications:
-    - target: {fileID: 6671502587782920093, guid: a40ce9dd00af64495b1f9590b6a1ce04,
-        type: 3}
-      propertyPath: m_Name
-      value: SpaceCaw
-      objectReference: {fileID: 0}
     - target: {fileID: 3228504685739590632, guid: a40ce9dd00af64495b1f9590b6a1ce04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -273,6 +282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671502587782920093, guid: a40ce9dd00af64495b1f9590b6a1ce04,
+        type: 3}
+      propertyPath: m_Name
+      value: SpaceCaw
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40ce9dd00af64495b1f9590b6a1ce04, type: 3}

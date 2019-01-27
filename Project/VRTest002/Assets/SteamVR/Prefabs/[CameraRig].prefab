@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 5705836960581811810}
   - component: {fileID: 1236412802628561529}
   - component: {fileID: 8090757827530104025}
-  - component: {fileID: 8407914528706379065}
+  - component: {fileID: 1496911267374462469}
   m_Layer: 0
   m_Name: Controller (right)
   m_TagString: Untagged
@@ -401,11 +401,11 @@ BoxCollider:
   m_GameObject: {fileID: 159396}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8407914528706379065
+--- !u!114 &1496911267374462469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,8 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc880d4c01bbee942aa4af7738f9e423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachPoint: {fileID: 0}
-  ShotPower: 10
+  offsetRate: 100
+  beko: {fileID: 1722033968, guid: 8ce66228917fc5246b62ec920056d321, type: 3}
   spawn:
     actionPath: /actions/default/in/InteractUI
     needsReinit: 0
@@ -490,7 +490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4000013889601590
 Transform:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3022497758230647575
 Transform:
   m_ObjectHideFlags: 0
@@ -689,11 +689,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458974}
     m_Modifications:
-    - target: {fileID: 8195811581347363537, guid: d13710882c6664a3bae07be88f108ac1,
-        type: 3}
-      propertyPath: m_Name
-      value: HandL
-      objectReference: {fileID: 0}
     - target: {fileID: 4368618873864723727, guid: d13710882c6664a3bae07be88f108ac1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -748,6 +743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195811581347363537, guid: d13710882c6664a3bae07be88f108ac1,
+        type: 3}
+      propertyPath: m_Name
+      value: HandL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13710882c6664a3bae07be88f108ac1, type: 3}
@@ -854,11 +854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402434}
     m_Modifications:
-    - target: {fileID: 4538393217478587593, guid: 07e54b9dbb7784469a67ec6114718921,
-        type: 3}
-      propertyPath: m_Name
-      value: HandR
-      objectReference: {fileID: 0}
     - target: {fileID: 7586466943493638739, guid: 07e54b9dbb7784469a67ec6114718921,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -928,6 +923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: -0.04778541
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538393217478587593, guid: 07e54b9dbb7784469a67ec6114718921,
+        type: 3}
+      propertyPath: m_Name
+      value: HandR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07e54b9dbb7784469a67ec6114718921, type: 3}
