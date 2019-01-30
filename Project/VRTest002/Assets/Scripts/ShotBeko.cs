@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class ShotBeko : MonoBehaviour
 {
-    public int ColliderOffTime = 1;
+    [SerializeField]
+    private int ColliderOffTime = 1;
+    [SerializeField]
+    private int LifeTime = 20;
+
     private Collider col;
     // Start is called before the first frame update
     async void Awake()
@@ -16,19 +20,19 @@ public class ShotBeko : MonoBehaviour
         col.enabled = true;
     }
 
-    private float life_time;
+    private float life_time_counter;
 
     // Start is called before the first frame update
     void Start()
     {
-        life_time = 10f;
+        life_time_counter = LifeTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        life_time -= Time.deltaTime;
-        if (life_time <= 0f)
+        life_time_counter -= Time.deltaTime;
+        if (life_time_counter <= 0f)
         {
             Destroy(this.gameObject);
         }

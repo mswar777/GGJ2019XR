@@ -45,8 +45,9 @@ public class SceneLoader : MonoBehaviour
                 sceneName = "SceneGameOver";
                 break;
         }
-        print(CowSound);
-        if(CowSound != null)CowSound.Play();
+        //print(CowSound);
+        if (CowSound != null)
+            CowSound.Play();
         //CowSound.SetActive(true);
         SteamVR_LoadLevel.Begin(sceneName);
     }

@@ -11,7 +11,7 @@ public class CowShot : MonoBehaviour
     //ベコをくっつけるオブジェクト
     private GameObject attachPoint = null;
     //ベコを打ち出す力
-    private float ShotPower = 0.01f;
+    private float ShotPower = 0.001f;
     //つかんで打ち出すのに使用するviveコントローラーのボタンを設定する
     public SteamVR_Action_Boolean spawn = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
     //つかむもののタグ

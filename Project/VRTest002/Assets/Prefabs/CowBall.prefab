@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1722033969}
   - component: {fileID: 4129087389332769119}
   - component: {fileID: 3831025453289762354}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CowBall
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColliderOffTime: 1
+  LifeTime: 20
 --- !u!1001 &4937077133104805748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,6 +229,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1722033973}
     m_Modifications:
+    - target: {fileID: 6671502587782920093, guid: a40ce9dd00af64495b1f9590b6a1ce04,
+        type: 3}
+      propertyPath: m_Name
+      value: SpaceCaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671502587782920093, guid: a40ce9dd00af64495b1f9590b6a1ce04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3228504685739590632, guid: a40ce9dd00af64495b1f9590b6a1ce04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,10 +294,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6671502587782920093, guid: a40ce9dd00af64495b1f9590b6a1ce04,
+    - target: {fileID: 349942032166019904, guid: a40ce9dd00af64495b1f9590b6a1ce04,
         type: 3}
-      propertyPath: m_Name
-      value: SpaceCaw
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615003586873230531, guid: a40ce9dd00af64495b1f9590b6a1ce04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40ce9dd00af64495b1f9590b6a1ce04, type: 3}
