@@ -12,7 +12,7 @@ public class FinishCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loader = GameObject.Find("SceneLoader").GetComponent<TestSceneLoader>();
+        loader = GameObject.Find("Controller (left)").GetComponent<TestSceneLoader>();
     }
 
     // Update is called once per frame
