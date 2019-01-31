@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuideStart : MonoBehaviour
 {
-    const float blink_interval = 0.6f;
-    float time_counter;
+    [SerializeField]
+    private const float blink_interval = 0.8f;
+    private float time_counter;
+    [SerializeField]
+    private Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class GuideStart : MonoBehaviour
         {
             time_counter = blink_interval;
             // on/off toggle
-            gameObject.SetActive(!gameObject.activeSelf);
+            text.enabled = !text.enabled;
         }
     }
 }
