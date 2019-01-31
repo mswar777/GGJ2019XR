@@ -18,7 +18,7 @@ public class TestSceneLoader : MonoBehaviour
         stateNum = Enum.GetValues(typeof(SceneState)).Length;
         nowStateNum = 0;
         loader = GetComponent<SceneLoader>();
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void NextSceneLoad()
