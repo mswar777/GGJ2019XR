@@ -28,8 +28,8 @@ public class FinishCollision : MonoBehaviour
         //    Debug.DrawRay(contact.point, contact.normal, Color.white);
         //}
 
-        if (collision.gameObject.name != "CawBall")
-             return;
+        if (collision.gameObject.name.StartsWith("CowBall") == false)
+            return;
 
         if (collision.relativeVelocity.magnitude > 1)
         {

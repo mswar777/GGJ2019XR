@@ -116,4 +116,27 @@ public class CowShot : MonoBehaviour
         //    jointList.Add(joint);
         //}
     }
+
+    private void OnTriggerStay(Collision collision)
+    {
+        /*
+        if (!isCatch)
+            return;
+        if (collision.gameObject.CompareTag(catchTag) == false)
+            return;
+        if (shotBekoList.Contains(collision.gameObject))
+            return;
+
+        {
+            //ベコのリリースフラグを立てて動かないようにする
+            collision.gameObject.GetComponent<Beko>().release_flg = true;
+            //ジョイントで繋ぐ
+            var joint = collision.gameObject.AddComponent<FixedJoint>();
+            joint.connectedBody = attachRb;
+            //各リストに追加
+            shotBekoList.Add(collision.gameObject);
+            jointList.Add(joint);
+        }
+        */
+    }
 }
