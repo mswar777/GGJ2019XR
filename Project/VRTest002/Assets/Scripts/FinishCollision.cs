@@ -28,13 +28,14 @@ public class FinishCollision : MonoBehaviour
         //    Debug.DrawRay(contact.point, contact.normal, Color.white);
         //}
 
-        //if (collision.gameObject.Name != "CawBall")
-        //     return;
+        if (collision.gameObject.name != "CawBall")
+             return;
 
         if (collision.relativeVelocity.magnitude > 1)
         {
-            Debug.Log("caw hit!");
-            if (--beko_counter <= 0)
+            --beko_counter;
+            Debug.Log("caw hit! :" + beko_counter);
+            if (beko_counter <= 0)
             {
                 if (loader != null)
                     loader.NextSceneLoad();
