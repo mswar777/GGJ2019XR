@@ -6,12 +6,12 @@ using Valve.VR;
 [RequireComponent(typeof(SteamVR_TrackedObject),typeof(Rigidbody),typeof(BoxCollider))]
 public class CowShot : MonoBehaviour
 {
-    public float offsetRate = 100.0f;
+    public float offsetRate = 10.0f;
     public GameObject beko = null;
     //ベコをくっつけるオブジェクト
     private GameObject attachPoint = null;
     //ベコを打ち出す力
-    private float ShotPower = 0.001f;
+    public float ShotPower = 0.001f;
     //つかんで打ち出すのに使用するviveコントローラーのボタンを設定する
     public SteamVR_Action_Boolean spawn = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
     //つかむもののタグ

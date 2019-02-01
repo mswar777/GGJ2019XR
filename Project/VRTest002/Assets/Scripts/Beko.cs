@@ -67,7 +67,16 @@ public class Beko : MonoBehaviour
         //position.y = position.y;
         position.z = -Mathf.Sin(psit) * position.x + Mathf.Cos(psit) * position.z;
         this.transform.position = base_position + position;
-        this.transform.forward = -(position - previous_position);
+
+        // Vector Zero対策
+        const double FLOAT_EPSILON = 1.192093E-07;
+        var forward = position - previous_position;
+        if ((double)forward.sqrMagnitude >= FLOAT_EPSILON/*float.Epsilon*/)
+        {
+            forward.Normalize();
+            this.transform.forward = forward * -1f;
+        }
+
         t += Time.deltaTime;
         if (t >= speed)
             t = 0f;
